@@ -1,10 +1,5 @@
 import { Container, Filters, ProductCard, ProductsGroupList, Title, TopBar } from "@/components/shared";
-// <ProductCard
-//     id={121313}
-//     name={'Сырная 🌱👶 '}
-//     price={500}
-//     imageUrl="https://media.dodostatic.net/image/r:292x292/11EE7D610D2925109AB2E1C92CC5383C.jpg"
-// />
+
 export default function Home() {
     return (
         <>
@@ -70,8 +65,8 @@ export default function Home() {
                                 }
                             />
                             <ProductsGroupList
-                                title="Завтрак"
-                                categoryId={'1'}
+                                title="Комбо"
+                                categoryId={'2'}
                                 items={
                                     [
                                         {

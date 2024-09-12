@@ -2,9 +2,8 @@
 import React, {useMemo, useState} from 'react';
 import { CheckboxFiltersGroup, FilterCheckbox, RangeSlider, Title } from "@/components/shared";
 import { Input } from "@/components/ui";
-import {useFilterIngredients} from "@/hooks/useFilterIngredients";
-import {Nunito} from "next/font/google";
-import {useSet} from "react-use";
+import { useFilterIngredients } from "@/hooks/useFilterIngredients";
+import { useSet } from "react-use";
 
 
 interface Props {
@@ -34,8 +33,6 @@ export const Filters:React.FC<Props> = ({ className }) => {
     }
 
     const [sizes, {toggle:toggleSizes}] = useSet(new Set<string>([]));
-
-    console.log('sizes', sizes)
 
 
     return (

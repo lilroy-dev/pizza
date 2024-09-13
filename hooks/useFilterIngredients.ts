@@ -11,10 +11,10 @@ interface ReturnProps {
     onAddId: (id: string) => void;
 }
 
-export const useFilterIngredients = (): ReturnProps => {
+export const useFilterIngredients = (values:string[] = []): ReturnProps => {
     const [ingredients, setIngredients] = useState<Ingredient[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
-    const [selectedIds, {  toggle }] = useSet<string>(new Set([]));
+    const [selectedIds, {  toggle }] = useSet(new Set<string>(values));
 
 
     const onAddId = (id: string) => {
@@ -34,5 +34,5 @@ export const useFilterIngredients = (): ReturnProps => {
             });
     }, []);
 
-    return { ingredients, loading:false, onAddId,  selectedIds };
+    return { ingredients, loading, onAddId,  selectedIds};
 }
